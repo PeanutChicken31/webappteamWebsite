@@ -1,0 +1,691 @@
+body{
+margin:0px;
+font-family: monospace, 'Courier New', Courier;
+}
+
+:root{
+    --global-font-type-title: monospace;
+    --global-background-black: rgb(44, 44, 44);
+    --global-background-yellow: #EEBA2D;
+    --global-background-orange: #E09121;
+}
+
+.navBar{
+    position:fixed;
+    background-color: rgb(1, 1, 1);
+    
+    width: 100%;
+    height: 80px;
+    margin: 0px 0px;
+    top:0px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index:10;
+
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.navBarLeft ul{
+    margin: 10px 0px; 
+    padding-inline-start: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height:100%;
+}
+
+.navBar li{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.navBar li a{
+    color: white;
+    font-size: 18px;
+    text-decoration:none;
+    border-bottom: 3px solid black;
+}
+.navBar li a:hover{
+    color:var(--global-background-yellow);
+    border-bottom: 3px outset var(--global-background-yellow);
+    transition-duration: 0.7s;
+}
+
+.navBarLeft{
+    width: 90%;
+}
+
+.navBarLeft img{
+    width: 60px;
+    height: 60px;
+}
+
+.navBarRight{
+    /*margin-right: 25px ;*/
+    text-align: right;
+    position:relative;
+    display: inline-block;
+    color: white;
+}
+
+.navBarRight ul{
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height:100%;
+}
+
+.navBarRight p{
+    margin-bottom: 0px;
+}
+.navBarRight h4{
+    margin-top:0px;
+}
+
+/*Body start*/
+
+.welcome{
+    height: 300px;
+    width: 90%;
+    display:grid;
+    grid-template: repeat(7,1fr)/ repeat(9,1fr) ;
+    align-items:center;
+    justify-items: center;
+
+    font-family:var(--global-font-type-title);
+    margin: 130px 5% 130px 5%;
+    text-align: left;
+    
+}
+
+/*Orange yellow block*/
+
+.backgroundBlock{
+    position:absolute;
+    margin-top: 100px;
+    margin-bottom:80px;
+    
+    height:350px;
+    max-height:500px;
+    width: 70%;
+
+}
+
+.backgroundBlockTop{
+    position:absolute;
+    margin-top: 150px;
+    margin-bottom:20px;
+    height:350px;
+    max-height:500px;
+    width: 70%;
+}
+
+.backgroundBlock table{
+    height: 100%;
+    width: 100%;
+}
+
+.backgroundBlockTop table{
+    height: 100%;
+    width: 100%;
+}
+
+.backgroundBlock table,
+.backgroundBlock tr,
+.backgroundBlock td,
+.backgroundBlock th{
+    border: 0px solid transparent;
+    border-collapse:collapse;
+    border-spacing: 0px;
+}
+
+.backgroundBlockTop table,
+.backgroundBlockTop tr,
+.backgroundBlockTop td,
+.backgroundBlockTop th{
+    border: 0px solid transparent;
+    border-collapse:collapse;
+    border-spacing: 0px;
+}
+
+
+.backgroundBlock table tr td:nth-child(1)
+{
+    background-color:  var(--global-background-yellow);
+}
+
+.backgroundBlock table tr td:nth-child(2),
+.backgroundBlock table tr td:nth-child(3),
+.backgroundBlock table tr td:nth-child(4),
+.backgroundBlock table tr td:nth-child(5),
+.backgroundBlock table tr td:nth-child(6),
+.backgroundBlock table tr td:nth-child(7),
+.backgroundBlock table tr td:nth-child(8){
+    background-color: var(--global-background-yellow);
+}
+
+.backgroundBlockTop table tr td:nth-child(1){
+    width: 5%;
+}
+
+.backgroundBlockTop table tr td:nth-child(2),
+.backgroundBlockTop table tr td:nth-child(3),
+.backgroundBlockTop table tr td:nth-child(4),
+.backgroundBlockTop table tr td:nth-child(5),
+.backgroundBlockTop table tr td:nth-child(6),
+.backgroundBlockTop table tr td:nth-child(7),
+.backgroundBlockTop table tr td:nth-child(8),
+.backgroundBlockTop table tr td:nth-child(9){
+    background-color: var(--global-background-orange);
+    z-index: 3;
+}
+    
+/*text of block*/
+.frontBlock{
+    width: 100%;
+    grid-area: 5/3/7/9;
+    z-index: 3;
+}
+
+.welcome h1{
+    margin: 10px 0px;
+    padding: 0px 0px;
+    font-size: 4em;
+    font-weight: bold;
+
+    color:white;
+}
+
+
+.welcome h2{
+    margin: 5px 10px;
+    padding:0px;
+    font-size: 3em;
+    font-weight: 80;
+    color:white;
+}
+
+.welcome p{
+    margin: 0px 0px 0px 20px;
+    padding:10px;
+    font-size: 24px;
+    color:white;
+}
+
+
+
+
+.dashboard{
+    margin: 0 5%;
+    
+}
+
+.threeColumns{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    margin: 0 auto;
+    
+}
+
+.dashBox{
+    display: inline-block;
+
+    border: 3px dotted rgb(44, 44, 44);
+    background-color: rgb(44, 44, 44);
+
+    text-align: center;
+    font-size: 20px;
+
+    border-radius: 20px;
+    color:white;
+
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.dashBox:hover {
+    background-color:white;
+    transition-duration: 1s;
+    color:black;
+
+}
+
+.dashBox p{
+    color:white;
+}
+
+.dashBox:hover p{
+    color:black;
+}
+
+.dashBox a{
+    display:inline-block;
+    padding-top: 20px;
+    width:100%;
+
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    
+    color:white;
+}
+
+.dashBox:hover a{
+    color:black;
+    transition-duration: .5s;
+}
+
+.dashBox a :visited{
+    color:black;
+
+}
+
+/* useful link*/
+.usefulLink{
+    margin: 0 5%;
+    text-align: center;
+}
+
+.usefulLink h2{
+    font-size: 2.5rem;
+    font-family: var(--global-font-type-title);
+}
+
+.linkContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    margin: 0 auto;
+    justify-items: center;
+    width: 100%;
+
+}
+
+.linkBox1, .linkBox2, .linkBox3{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+
+    border:3px solid black;
+    border-radius: 50%;
+    width:200px;
+    height:200px;
+
+    font-size: 1.5em;
+    
+}
+
+.linkBox1{
+    background-color: black;
+    background-image: url(W3Schools_logo4.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.linkBox2{
+    background-image: url(keyboard.jpg);
+    background-size: cover;
+}
+
+.linkBox3{
+    background-image: url(codecademy.png);
+    background-size: cover;
+}
+
+.linkBox1:hover, .linkBox2:hover, .linkBox3:hover{
+    filter:brightness(0.5);
+    background-color:hsla(0,0%,0%,0.5) ;
+    transition-duration: 1s;
+    transform: scale(1.1,1.1);
+}
+
+.linkBox1 a , .linkBox2 a, .linkBox3 a{
+    z-index:3;
+    margin:auto auto;
+    visibility: hidden;
+    color:hsla(0,0%,0%,0);
+    text-decoration: none;
+}
+
+.linkBox1:hover a, .linkBox2:hover a, .linkBox3:hover a{
+    visibility: visible;
+    color:white;
+    transition-duration: 1s;
+}
+
+.aboutHebeContainer{
+    margin: 5% 0%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    width:100%;
+
+}
+
+.aboutHebePhotoBlock{
+    padding: 0% 5%;
+    display:inline;
+}
+
+.aboutHebePhotoBlock img{
+    width:100%;
+}
+
+.aboutHebeBlock{
+    display:inline-block;
+    width:50%;
+    padding: 0% 5% 0% 0%;
+    text-align: left;
+}
+
+.aboutHebeBlock h2{
+   font-size: 50px;
+   font-family: var(--global-font-type-title);
+   margin:0px;
+}
+
+.aboutHebeBlock h3{
+    font-size: 30px;
+    font-family: var(--global-font-type-title);
+    margin: 0px;
+}
+
+.aboutHebeBlock p{
+   font-size: 24px;
+
+}
+
+.aboutHebeBlock a{
+    color:black;
+    text-decoration: none;
+}
+
+/*Course Outline ____________________________________________________________________________________________________________________________*/
+
+
+.coTimeline{
+    margin-top: 80px;
+
+}
+
+.coTimeline img{
+    width: 100%;
+    height: auto;
+}
+
+.coDashboard{
+    text-align: center;
+}
+
+.coDashboardContainer{
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.coDashboardBox{
+    display: inline-block;
+    min-height: 10em;
+    max-height: 250px;
+    border: 3px solid black;
+    width: 30%;
+    border-radius: 15px;
+    background-color: var(--global-background-orange);
+    color:white;
+
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+
+
+.coTable{
+    text-align: center;
+    padding: 5% 5%;
+    margin:0;
+
+}
+
+.coTable h2{
+    font-size: 3em;
+    color: black;
+}
+
+.coTableContainer{
+    display:flex;
+    justify-content: center;
+}
+
+.coTable table,th,td{
+    
+    border: 1px dotted black; 
+    text-align: center;
+}
+
+.coTable table{
+    width: 100%;
+}
+
+.coTable th{
+    background-color: var(--global-background-yellow);
+}
+
+.coTable tr td:first-child{
+    width:10%;
+    background-color:lavenderblush;
+}
+
+.coTable tr td:nth-child(2){
+    width:10%;
+
+}
+/*Learning Material__________________________________________________________________________________________________________________________*/
+
+/*Grid*/
+.lmgridContainer{
+    display: grid;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    grid-template-columns: 20% 80%;
+    height: 100%;
+    
+}
+
+/*Navigation Bar*/
+.lminPageNavigation{
+    width: 90%;
+    height: 100%;
+
+    margin: 80px 0px 0px 0px;
+    padding: 0px;
+
+    font-family: monospace, 'Courier New', Courier;
+    
+    background-color: var(--global-background-orange);
+}
+
+.lminPageNavigation ol{
+    margin: 0px;
+    padding: 10px 0px 0px 10%;
+    list-style-type: none;
+    font-size: 1.5em;
+
+}
+
+.lminPageNavigation ol li{
+    padding: 5px 0px;
+}
+
+.lminPageNavigation ol li a{
+    color:white;
+    text-decoration: none;
+}
+.lminPageNavigation ol li a:hover{
+    color: black;
+    transition-duration: 0.5s;
+}
+
+/*Content Container*/
+
+.lmContent{
+    width: 60%;
+    margin-top: 80px;
+    padding-left: 10px;
+    font-family: monospace, 'Courier New', Courier;
+}
+
+.lmContent h1{
+    font-size: 2.5em;
+}
+
+.lmContent h2{
+    font-size: 2em;
+}
+
+/*Content Block*/
+#lesson1,#Introduction, #warmUp, #Html, #Css, #JavaScript, #webDesigning, #react{
+    padding-left:20px; 
+}
+
+/*lessonLink*/
+.lmLessonLinks{
+    margin: 10px 0px 0px 20px;
+    width:100%;
+}
+.lmLessonLinks a{
+    color:black;
+}
+
+.lmLessonLinks a:hover{
+    color:var(--global-background-orange);
+    transition-duration: .5s;
+}
+
+.lmLessonLinks table{
+    width: 100%;
+
+}
+.lmLessonLinks th{
+    background-color: var(--global-background-yellow);
+}
+.lmLessonLinks table tr td:nth-child(2){
+    width: 30%;
+}
+
+.lmLessonLinks table tr td:nth-child(1){
+    width: 20%;
+}
+
+/*lesson Material*/
+#lesson1{
+
+}
+
+
+/*self-learning Materials*/
+
+
+
+
+/*group project*_________________________________________________________________________________________________________________________________*/
+
+.gpContent{
+    margin: 80px 5% 0px 5% ;
+}
+.gpDashBoardGrid{
+    display: grid;
+    grid-template: 0.5fr 1fr 3fr/ 1fr 1fr 1fr;
+    grid-template-areas: "h1 h1 h1" 
+                        "h2 h2 h2" 
+                        "gpDate gpRequirement gpPlatform";
+    justify-content: center;
+    justify-items: center;
+    column-gap: 15px;
+}
+
+.gpDashBoardGrid h1{
+    grid-area: h1;
+    font-size: 1.5em;
+}
+
+.gpDashBoardGrid h2{
+    grid-area:h2;
+    font-size: 2em;
+}
+
+.gpDate,.gpRequirement,.gpPlatform{
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: 5%;
+    justify-self: stretch;
+    text-align: center;
+    background-color: var(--global-background-orange);
+
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.gpDate,.gpRequirement,.gpPlatform h3{
+    font-size: 1.8em;
+}
+.gpDate{
+    grid-area: gpDate;
+}
+
+.gpRequirement{
+    grid-area: gpRequirement;
+}
+
+.gpPlatform{
+    grid-area:gpPlatform;
+
+}
+
+.gpGoal{
+    display:inline-block;
+    padding-inline-start: 20%;
+    width: 60%;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3em; 
+}
+
+.gpGoal h3{
+    font-size: 1.3em;
+}
+
+.gpNameList h2{
+    text-align: center;
+    font-size: 2em;
+}
+.gpNameList table{
+    width: 100%;
+}
+
+.gpNameList table th{
+    background-color: var(--global-background-yellow);
+}
+
+.gpUsefulLink{
+    width: 100%;
+    padding-inline-start: 25%;
+    width: 50%;
+}
+
+.gpUsefulLink h2{
+    text-align: center;
+    font-size:1.5em;
+}
+
+.gpUsefulLink a{
+    text-decoration: none;
+    color:black;
+}
+
+.gpUsefulLink a:hover{
+    color: var(--global-background-orange);
+    transition-duration: 0.5s;
+}
